@@ -1,0 +1,45 @@
+@mixin menu{
+    width: 100%;
+  padding: 2.5em;
+  border-bottom: 1px solid gray;
+  display: inline-block;
+}
+
+@mixin logo {
+    width: 20%;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: left;
+    
+}
+
+@mixin input_menu {
+    display: inline-block;
+  border-radius: 30px;
+  
+    
+}
+
+@mixin container{
+    float: left;
+  width: 80%;
+}
+
+@mixin footer {
+    width: 100%;
+    display: inline-block;
+    
+    margin: 0 auto;
+    text-align: center;
+    
+  }
+
+  @mixin tags_li { 
+
+    display: inline-block;
+    padding: 2px 4px;
+    background-color: steelblue;
+    margin-right: 1px;
+    color: white;
+  }

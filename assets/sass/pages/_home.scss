@@ -8,23 +8,14 @@ body {
 
 
 
-
-
 /*menu*/
 .menu {
-  width: 100%;
-  padding: 2.5em;
-  border-bottom: 1px solid gray;
-  display: inline-block;
+  @include menu;
   
 
 
 &__logo {
-  width: 20%;
-  font-size: 24px;
-  font-weight: bold;
-  text-transform: uppercase;
-  display: left;
+  @include logo;
   
 }
 
@@ -48,9 +39,7 @@ ul#horizontal li {
 
 
 .input-menu {
-  display: inline-block;
-  border-radius: 30px;
-  
+  @include input_menu;
   
 }
 
@@ -59,8 +48,7 @@ ul#horizontal li {
 
 
 .container{
-  float: left;
-  width: 80%;
+  @include container;
 }
 
 
@@ -76,7 +64,6 @@ ul#horizontal li {
 
 .grid-item {
   
-  /*border: 1px solid rgba(0, 0, 0, 0.8);*/
   padding: 20px;
   text-align: center;
   width: 100%;
@@ -146,29 +133,45 @@ ul#horizontal li {
   }
 }
 
+
+
 .tags {
   border-bottom: 1px solid gray;
+
+  &__h1{
+    font-size: 1.5em;
+    font-weight: 800;
+    padding: 1em 0 1em 0;
+  }
+  
+
+  
+  &__ul{
+    padding-bottom: 1em;
+    list-style: none;
+    display:inline-block
+
+  }
+
+  &__li{
+    @include tags_li;
+ 
+
+  }
+
   
 }
 
-.tags ul {
-  padding: 0;
-  list-style: none;
-}
 
-.tags ul li {
-  padding: 2px 4px;
-  background-color: steelblue;
-  margin-right: 1px;
-  color: white;
-}
+
+
 
 .noticias-destacadas {
 
   text-align: left;
 
   &__h1{
-    font-size: 2.1em;
+    font-size: 2.5em;
   }
 
   &__item {
@@ -187,10 +190,6 @@ ul#horizontal li {
   
 }
 
-
-
-
-
 /*bottom*/
 
 
@@ -206,11 +205,7 @@ ul#horizontal li {
 
 
 .footer {
-  width: 100%;
-  display: inline-block;
-  
-  margin: 0 auto;
-  text-align: center;
+  @include footer;
   
 
   &__newsletter{
@@ -241,7 +236,48 @@ ul#horizontal li {
 
 
 
+
+
 /*mediaqueries*/
+
+
+
+
+/*medium devices*/
+@media (max-width: 991.98px) { 
+
+
+  /*grilla principal*/
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto ;
+  width: 100%;
+  
+  
+  
+}
+
+/*grilla derecha*/
+
+.grid-container-aside {
+ 
+ display: none;
+
+}
+}
+
+
+
+
+  
+
+
+
+
+/*small divices*/
 @media (max-width: 575.98px){
 
  
@@ -286,7 +322,7 @@ ul#horizontal li {
 
 
 .container{
-  float: left;
+  
   width: 100%;
 }
 
@@ -302,33 +338,12 @@ ul#horizontal li {
 
 .grid-item {
   
-  /*border: 1px solid rgba(0, 0, 0, 0.8);*/
-  padding: 20px;
-  text-align: center;
-  width: 100%;
-  
-  
-  &__h2{
-    font-size: 2em;
-    text-align: left;
-    
-  }
-  &__p{
-    font-size: 1em;
-    text-align: left;
-   
-  }
-
   &__img{
     width:100%;
     height: 20em;
     object-fit: cover;
   }
 }
-
-
-
-
 
 }
 
