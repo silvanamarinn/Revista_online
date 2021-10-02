@@ -1,0 +1,275 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+}
+
+/*menu*/
+.menu {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid gray;
+}
+.menu__logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.menu__input {
+  border-radius: 30px;
+}
+
+.nav {
+  display: inline;
+  width: 100%;
+  text-align: right;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.input-menu {
+  border-radius: 30px;
+}
+
+/*grilla principal*/
+.container {
+  float: left;
+  width: 80%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 95%;
+  margin-left: 4em;
+}
+
+.grid-item {
+  /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+.grid-item__h2 {
+  font-size: 2em;
+  text-align: left;
+  font-weight: 800;
+  margin-bottom: 1em;
+}
+.grid-item__p {
+  font-size: 1em;
+  text-align: left;
+}
+.grid-item__img {
+  width: 100%;
+}
+
+/*grilla derecha*/
+.grid-container-aside {
+  display: grid;
+  grid-template-columns: auto;
+  width: 20%;
+  text-align: left;
+}
+.grid-container-aside__item {
+  margin: 3em;
+  width: 70%;
+}
+
+.cabecera-listado {
+  border-bottom: 1px solid gray;
+}
+.cabecera-listado__h1 {
+  font-size: 1.5em;
+  font-weight: 800;
+}
+.cabecera-listado__p {
+  margin-top: 1em;
+  font-size: 1em;
+  text-align: left;
+}
+
+.tags {
+  border-bottom: 1px solid gray;
+}
+
+.tags ul {
+  padding: 0;
+  list-style: none;
+}
+
+.tags ul li {
+  padding: 2px 4px;
+  background-color: steelblue;
+  margin-right: 1px;
+  color: white;
+}
+
+.noticias-destacadas {
+  text-align: left;
+}
+.noticias-destacadas__h1 {
+  font-size: 2.1em;
+}
+.noticias-destacadas__item {
+  font-weight: 800;
+}
+.noticias-destacadas__h4 {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.noticias-destacadas__img {
+  width: 100%;
+}
+
+/*bottom*/
+.newsletter h2 {
+  font-size: 24px;
+  font-weight: 800;
+  padding: 0.5em;
+}
+
+.group input,
+.group button {
+  display: inline-block;
+  border-width: 0;
+  font-size: 13px;
+  padding: 5px 10px;
+}
+
+.group button {
+  background-color: coral;
+  color: white;
+}
+
+.footer {
+  width: 100%;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1em 1em;
+}
+.footer__newsletter {
+  background-color: #f2f4f5;
+  height: 8em;
+}
+.footer__h2 {
+  font-size: 1.8em;
+  font-weight: 800;
+  margin-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+.footer__p {
+  margin-bottom: 1em;
+}
+
+/*mediaqueries*/
+@media (max-width: 575.98px) {
+  /*grilla derecha*/
+  .grid-container-aside {
+    display: grid;
+    grid-template-columns: auto;
+    width: 20%;
+    text-align: left;
+    display: none;
+  }
+  .grid-container-aside__item {
+    margin: 3em;
+    width: 70%;
+  }
+
+  /*grilla principal*/
+  .container {
+    float: left;
+    width: 100%;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    width: 90%;
+    margin-left: 2em;
+  }
+
+  .grid-item {
+    /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  .grid-item__h2 {
+    font-size: 2em;
+    text-align: left;
+  }
+  .grid-item__p {
+    font-size: 1em;
+    text-align: left;
+  }
+  .grid-item__img {
+    width: 100%;
+    height: 20em;
+    object-fit: cover;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
